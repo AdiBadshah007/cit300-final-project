@@ -17,7 +17,7 @@ document.getElementById("membershipForm")
 
   let terms = document.getElementById("terms").checked;
 
-  // Error spans
+  // Error Messages
 
   let nameError = document.getElementById("nameError");
 
@@ -29,7 +29,7 @@ document.getElementById("membershipForm")
 
   let termsError = document.getElementById("termsError");
 
-  // Clear errors
+  // Clear old errors
 
   nameError.innerText = "";
 
@@ -41,7 +41,7 @@ document.getElementById("membershipForm")
 
   termsError.innerText = "";
 
-  // Name validation
+  // Name Validation
 
   if(name === ""){
 
@@ -50,7 +50,7 @@ document.getElementById("membershipForm")
     valid = false;
   }
 
-  // Email validation
+  // Email Validation
 
   let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
@@ -60,14 +60,14 @@ document.getElementById("membershipForm")
 
     valid = false;
 
-  } else if(!email.match(emailPattern)){
+  }else if(!email.match(emailPattern)){
 
     emailError.innerText = "Enter a valid email";
 
     valid = false;
   }
 
-  // Age validation
+  // Age Validation
 
   if(age === ""){
 
@@ -75,14 +75,14 @@ document.getElementById("membershipForm")
 
     valid = false;
 
-  } else if(age < 18 || age > 60){
+  }else if(age < 18 || age > 60){
 
     ageError.innerText = "Age must be between 18 and 60";
 
     valid = false;
   }
 
-  // Gender validation
+  // Gender Validation
 
   if(gender === ""){
 
@@ -91,11 +91,11 @@ document.getElementById("membershipForm")
     valid = false;
   }
 
-  // Terms validation
+  // Checkbox Validation
 
   if(!terms){
 
-    termsError.innerText = "You must agree first";
+    termsError.innerText = "Please accept terms first";
 
     valid = false;
   }
