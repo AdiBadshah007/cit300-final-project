@@ -27,23 +27,23 @@ body{
   z-index:1000;
 }
 
-.logo{
-  color:#ff6600;
-  font-size:32px;
-
-  animation: glow 2s infinite alternate;
+.animated-logo{
+  width:170px;
 }
+
+/* Navigation */
 
 .nav-links{
   display:flex;
-  list-style:none;
   gap:25px;
+  list-style:none;
 }
 
 .nav-links a{
-  color:white;
   text-decoration:none;
+  color:white;
   transition:0.3s;
+  font-weight:500;
 }
 
 .nav-links a:hover{
@@ -66,23 +66,25 @@ body{
 
 .overlay{
   background:rgba(0,0,0,0.6);
-  padding:40px;
+  padding:50px;
   border-radius:15px;
 }
 
-.overlay h2{
+.overlay h1{
   font-size:60px;
   margin-bottom:20px;
 }
 
 .overlay p{
-  margin-bottom:20px;
   font-size:18px;
+  margin-bottom:25px;
 }
+
+/* Button */
 
 .btn{
   display:inline-block;
-  padding:12px 25px;
+  padding:14px 30px;
   background:#ff6600;
   color:white;
   text-decoration:none;
@@ -102,10 +104,12 @@ section{
 }
 
 section h2{
-  font-size:40px;
-  margin-bottom:20px;
   color:#ff6600;
+  margin-bottom:20px;
+  font-size:40px;
 }
+
+/* About */
 
 .about p{
   max-width:800px;
@@ -122,7 +126,7 @@ section h2{
 
 .gallery-container img{
   width:450px;
-  border-radius:12px;
+  border-radius:15px;
   transition:0.4s;
 }
 
@@ -140,7 +144,7 @@ audio{
   margin-top:20px;
 }
 
-.video-heading{
+.video-title{
   margin-top:50px;
 }
 
@@ -187,10 +191,10 @@ button{
   margin-top:20px;
   padding:14px;
   background:#ff6600;
-  border:none;
   color:white;
-  font-size:16px;
+  border:none;
   border-radius:8px;
+  font-size:16px;
   cursor:pointer;
   transition:0.3s;
 }
@@ -199,6 +203,8 @@ button:hover{
   background:white;
   color:black;
 }
+
+/* Errors */
 
 .error{
   color:red;
@@ -209,23 +215,9 @@ button:hover{
 /* Footer */
 
 footer{
+  background:black;
   text-align:center;
   padding:20px;
-  background:#000;
-}
-
-/* Animation */
-
-@keyframes glow{
-
-  from{
-    text-shadow:0 0 5px #ff6600;
-  }
-
-  to{
-    text-shadow:0 0 20px #ff6600;
-  }
-
 }
 
 /* Responsive */
@@ -234,15 +226,16 @@ footer{
 
   .navbar{
     flex-direction:column;
-    gap:15px;
+    gap:20px;
   }
 
-  .overlay h2{
-    font-size:38px;
-  }
-
-  .gallery-container{
+  .nav-links{
+    flex-wrap:wrap;
     justify-content:center;
+  }
+
+  .overlay h1{
+    font-size:38px;
   }
 
   .gallery-container img{
