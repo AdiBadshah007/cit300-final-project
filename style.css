@@ -1,0 +1,256 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Poppins', sans-serif;
+  background:#111;
+  color:white;
+}
+
+/* Navbar */
+
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 8%;
+  background:#000;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.logo{
+  color:#ff6600;
+  font-size:32px;
+
+  animation: glow 2s infinite alternate;
+}
+
+.nav-links{
+  display:flex;
+  list-style:none;
+  gap:25px;
+}
+
+.nav-links a{
+  color:white;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.nav-links a:hover{
+  color:#ff6600;
+}
+
+/* Hero */
+
+.hero{
+  height:100vh;
+  background:url('images/banner.jpg');
+  background-size:cover;
+  background-position:center;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.overlay{
+  background:rgba(0,0,0,0.6);
+  padding:40px;
+  border-radius:15px;
+}
+
+.overlay h2{
+  font-size:60px;
+  margin-bottom:20px;
+}
+
+.overlay p{
+  margin-bottom:20px;
+  font-size:18px;
+}
+
+.btn{
+  display:inline-block;
+  padding:12px 25px;
+  background:#ff6600;
+  color:white;
+  text-decoration:none;
+  border-radius:8px;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:white;
+  color:black;
+}
+
+/* Sections */
+
+section{
+  padding:80px 10%;
+}
+
+section h2{
+  font-size:40px;
+  margin-bottom:20px;
+  color:#ff6600;
+}
+
+.about p{
+  max-width:800px;
+  line-height:1.8;
+}
+
+/* Gallery */
+
+.gallery-container{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.gallery-container img{
+  width:450px;
+  border-radius:12px;
+  transition:0.4s;
+}
+
+.gallery-container img:hover{
+  transform:scale(1.05);
+}
+
+/* Media */
+
+.media{
+  text-align:center;
+}
+
+audio{
+  margin-top:20px;
+}
+
+.video-heading{
+  margin-top:50px;
+}
+
+video{
+  width:80%;
+  max-width:800px;
+  margin-top:20px;
+  border-radius:15px;
+}
+
+/* Form */
+
+.contact{
+  background:#1a1a1a;
+}
+
+form{
+  max-width:500px;
+  display:flex;
+  flex-direction:column;
+}
+
+form label{
+  margin-top:15px;
+  margin-bottom:5px;
+}
+
+form input,
+form select{
+  padding:12px;
+  border:none;
+  border-radius:8px;
+  font-size:16px;
+}
+
+.checkbox{
+  margin-top:15px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+button{
+  margin-top:20px;
+  padding:14px;
+  background:#ff6600;
+  border:none;
+  color:white;
+  font-size:16px;
+  border-radius:8px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  background:white;
+  color:black;
+}
+
+.error{
+  color:red;
+  font-size:14px;
+  margin-top:5px;
+}
+
+/* Footer */
+
+footer{
+  text-align:center;
+  padding:20px;
+  background:#000;
+}
+
+/* Animation */
+
+@keyframes glow{
+
+  from{
+    text-shadow:0 0 5px #ff6600;
+  }
+
+  to{
+    text-shadow:0 0 20px #ff6600;
+  }
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+  .navbar{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  .overlay h2{
+    font-size:38px;
+  }
+
+  .gallery-container{
+    justify-content:center;
+  }
+
+  .gallery-container img{
+    width:100%;
+  }
+
+  video{
+    width:100%;
+  }
+
+}
